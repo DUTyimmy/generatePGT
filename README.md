@@ -1,5 +1,7 @@
 # generatePGT
-generating pseudo labels for MFNet
+Generating pseudo labels for MFNet.
+
+This can also be served as a pipeline for all weakly supervised salient object detection (WSOD) methods. this code can generate class activation maps (CAMs) as well as two kinds of pseudo labels for WSOD.
 
 ## Prerequisites
 ### environment
