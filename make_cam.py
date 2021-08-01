@@ -8,6 +8,7 @@ from torch.backends import cudnn
 from functions.pamr import BinaryPamr
 import importlib
 import os
+from functions.crf import crf
 import dataloader
 from functions import torchutils, imutils
 
@@ -31,6 +32,7 @@ def _work(process_id, model, dataset, args):
             size = pack['size']
             strided_size = imutils.get_strided_size(size, 4)
             size = (int(size[0].item()), int(size[1].item()))
+            downsample_size = (int(size[0]/4), int(size[1]/4))
             outputs = [model(img[0].cuda(non_blocking=True)) for img in pack['img']]
 
             strided_cam = torch.sum(torch.stack(
@@ -45,15 +47,20 @@ def _work(process_id, model, dataset, args):
             cam = torch.sum(cam, 0).unsqueeze(0)
             cam /= f.adaptive_max_pool2d(cam, (1, 1)) + 1e-5
 
-            rgb = f.interpolate(rgb.unsqueeze(0), size, mode='bilinear')
-            cam = f.interpolate(cam.unsqueeze(0), size, mode='bilinear')
-            cam_pamr = BinaryPamr(rgb.cuda(), cam, binary=None)
+            rgb = f.interpolate(rgb.unsqueeze(0), downsample_size, mode='bilinear')
+            # cam = f.interpolate(cam.unsqueeze(0), downsample_size, mode='bilinear')
+            cam_pamr = BinaryPamr(rgb.cuda(), cam.unsqueeze(0), binary=None)
             cam_pamr = f.interpolate(cam_pamr, size, mode='bilinear')
             cam_pamr = cam_pamr.squeeze().cpu().numpy()*255.0
             cv2.imwrite(os.path.join(args.cam_pamr_out_dir, img_name + '.png'), cam_pamr)
 
             cam = cam.squeeze().cpu().numpy()*255.0
             cv2.imwrite(os.path.join(args.cam_out_dir, img_name + '.png'), cam)
+
+    # ------------- CRF ------------- #
+    print('\nCRFing .....   \n  ', end='')
+
+    crf(input_path=args.sal_dataset_dir, sal_path='result/cam', output_path='result/cam_pamr', binary=0.4)
 
 
 def run(args):
