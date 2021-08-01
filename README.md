@@ -18,10 +18,15 @@ you can download ImageNet from this [official website](https://image-net.org/).
 you can download DUTS-Train from this [official website](http://saliencydetection.net/duts/). Only RGB images are used in our MFNet.
 
 ## Training
-### First, 
+### Firstly, 
 you should set your trining and inference dataset root in ```--cls_dataset_dir``` and ```--sal_dataset_dir``` in ```run_sample.py```, respectively.
 ### Secondly,
 setting ```--train_cam_pass``` to True, and run ```run_sample.py```.
+
+## inference
+### Firstly, 
+setting ```--make_cam_pass``` to True, and run ```run_sample.py```. here you can get *CAMs* & *CAMs+PAMR* in root "result", latter is the semi-finished pixel-wise pseudo label.
+### Secondly,
 
 ## Acknowledge
 Thanks to pioneering helpful works:
