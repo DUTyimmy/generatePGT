@@ -29,6 +29,9 @@ setting ```--make_cam_pass``` to True, and run ```run_sample.py```. Here you can
 ### Secondly,
 Setting your inference dataset root in ```img_root``` in ```run_slic.py```, and run. Here you can get ③superpixel-wise pseudo labels.
 
+## Checkpoint
+
+we also offer our trained checkpoint in [here](https://pan.baidu.com/s/1G-YHYsfho-rWwMv6VMFT4g), code:oipw.
 
 ## Acknowledge
 Thanks to pioneering helpful works:
