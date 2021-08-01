@@ -19,15 +19,15 @@ you can download **DUTS-Train** dataset from this [official website](http://sali
 
 ## Training
 ### Firstly, 
-you should set your trining and inference dataset root in ```--cls_dataset_dir``` and ```--sal_dataset_dir``` in ```run_sample.py```, respectively.
+you should set your training and inference dataset root in ```--cls_dataset_dir``` and ```--sal_dataset_dir``` in ```run_sample.py```, respectively.
 ### Secondly,
 setting ```--train_cam_pass``` to True, and run ```run_sample.py```.
 
 ## inference
 ### Firstly, 
-setting ```--make_cam_pass``` to True, and run ```run_sample.py```. Here you can get ①CAMs & ②CAMs+PAMR+CRF in root ```./result/```, the latter is the pixel-wise pseudo label.
+setting ```--make_cam_pass``` to True, and run ```run_sample.py```. Here you can get ①CAMs and ②the pixel-wise pseudo labels in root ```./result/```, the latter is .
 ### Secondly,
-Setting your inference dataset root in ```img_root``` in ```run_slic.py```, and run. Here you can get ③CAMs+SLIC+CRF as superpixel-wise pseudo labels.
+Setting your inference dataset root in ```img_root``` in ```run_slic.py```, and run. Here you can get ③superpixel-wise pseudo labels.
 
 
 ## Acknowledge
