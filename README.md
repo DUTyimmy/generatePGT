@@ -12,10 +12,10 @@ This can also be served as a pipeline for all weakly supervised salient object d
   - other environment requirment can be found in requirments.txt 
 
 ### training dataset (ImageNet)
-you can download ImageNet from this [official website](https://image-net.org/).
+you can download **ImageNet** dataset from this [official website](https://image-net.org/).
 
 ### inference dataset (DUTS-Train RGB image)
-you can download DUTS-Train from this [official website](http://saliencydetection.net/duts/). Only RGB images are used in our MFNet.
+you can download **DUTS-Train** dataset from this [official website](http://saliencydetection.net/duts/). Only RGB images are used in our MFNet.
 
 ## Training
 ### Firstly, 
