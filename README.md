@@ -1,7 +1,7 @@
 # generatePGT
 Generating pseudo labels for MFNet.
 
-This can also be served as a pipeline for all weakly supervised salient object detection (WSOD) methods. this code can generate class activation maps (CAMs) as well as two kinds of pseudo labels for WSOD.
+This can also be served as a pipeline for all weakly supervised salient object detection (WSOD) methods. This code can generate class activation maps (CAMs) as well as two kinds of pseudo labels for WSOD. We sincerely hope that this will contribute to the community.
 
 ## Prerequisites
 ### environment
@@ -11,11 +11,17 @@ This can also be served as a pipeline for all weakly supervised salient object d
   - Python 3.7.4
   - other environment requirment can be found in requirments.txt 
 
-### training data (ImageNet)
+### training dataset (ImageNet)
 you can download ImageNet from this [official website](https://image-net.org/).
 
-### testing datasets
+### inference dataset (DUTS-Train RGB image)
 you can download DUTS-Train from this [official website](http://saliencydetection.net/duts/). Only RGB images are used in our MFNet.
+
+## Training
+### First, 
+you should set your trining and inference dataset root in ```--cls_dataset_dir``` and ```--sal_dataset_dir``` in ```run_sample.py```, respectively.
+### Secondly,
+setting ```--train_cam_pass``` to True, and run ```run_sample.py```.
 
 ## Acknowledge
 Thanks to pioneering helpful works:
