@@ -1,6 +1,19 @@
 # generatePGT
 generating pseudo labels for MFNet
 
+## Prerequisites
+### environment
+  - Windows 10
+  - Torch 1.8.1
+  - CUDA 10.0
+  - Python 3.7.4
+  - other environment requirment can be found in requirments.txt 
+
+### training data (ImageNet)
+you can download ImageNet from this [official website](https://image-net.org/).
+
+### testing datasets
+you can download DUTS-Train from this [official website](http://saliencydetection.net/duts/). Only RGB images are used in our MFNet.
 
 ## Acknowledge
 Thanks to pioneering helpful works:
