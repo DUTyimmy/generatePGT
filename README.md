@@ -25,9 +25,9 @@ setting ```--train_cam_pass``` to True, and run ```run_sample.py```.
 
 ## inference
 ### Firstly, 
-setting ```--make_cam_pass``` to True, and run ```run_sample.py```. Here you can get ①CAMs and ②the pixel-wise pseudo labels in root ```./result/```, the latter is .
+setting ```--make_cam_pass``` to True, and run ```run_sample.py```. Here you can get ① CAMs and ② the pixel-wise pseudo labels in root ```./result/```.
 ### Secondly,
-Setting your inference dataset root in ```img_root``` in ```run_slic.py```, and run. Here you can get ③superpixel-wise pseudo labels.
+Setting your inference dataset root in ```img_root``` in ```run_slic.py```, and run. Here you can get ③superpixel-wise pseudo labels in root ```./result/```.
 
 ## Checkpoint & Maps
 ### Checkpoint
