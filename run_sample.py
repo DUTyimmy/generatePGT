@@ -20,8 +20,8 @@ if __name__ == '__main__':
     parser.add_argument("--cam_scales", default=(1.0, 0.5, 1.5, 2.0), help="Multi-scale inferences")
 
     # Paths
-    parser.add_argument("--cls_dataset_dir", default="G:/Dataset/ImageNet", type=str, help='the dir of ImageNet')
-    parser.add_argument("--sal_dataset_dir", default="G:/Dataset/DUTS-TRAIN", type=str, help='the dir of DUTS-Train')
+    parser.add_argument("--cls_dataset_dir", default="", type=str, help='the dir of ImageNet')
+    parser.add_argument("--sal_dataset_dir", default="", type=str, help='the dir of DUTS-Train')
     parser.add_argument("--cam_weights_dir", default="ckpt/Cam_18000.pth", type=str, help='the dir of trained ckpt')
     parser.add_argument("--cam_out_dir", default="result/cam", type=str, help='the dir of generated cams')
     parser.add_argument("--cam_pamr_out_dir", default="result/cam_pamr", type=str, help='the dir of generated cam-pamr')
