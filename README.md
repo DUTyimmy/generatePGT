@@ -25,9 +25,9 @@ setting ```--train_cam_pass``` to True, and run ```run_sample.py```.
 
 ## inference
 ### Firstly, 
-setting ```--make_cam_pass``` to True, and run ```run_sample.py```. here you can get *CAMs* & *CAMs+PAMR* in root "result", latter is the semi-finished pixel-wise pseudo label.
+setting ```--make_cam_pass``` to True, and run ```run_sample.py```. Here you can get *CAMs* & *CAMs+PAMR* in root "/result", the latter is the semi-finished pixel-wise pseudo label.
 ### Secondly,
-
+Setting your inference dataset root in ```img_root``` in ```run_slic.py```, and run. Here you can get *CAMs+SLIC+CRF* as superpixel-wise pseudo labels.
 ## Acknowledge
 Thanks to pioneering helpful works:
 
