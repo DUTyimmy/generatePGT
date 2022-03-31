@@ -33,7 +33,7 @@ setting your inference dataset root in ```img_root``` in ```run_slic.py```, and 
 ### Checkpoint
 link: https://pan.baidu.com/s/1G-YHYsfho-rWwMv6VMFT4g.    code: oipw
 ### Maps: CAMs & pseudo labels
-link: https://pan.baidu.com/s/1MHOOEk0XkLuLkYqoVlw5gw.    code: oipw
+link: https://pan.baidu.com/s/1nowIVfeauJs6w_k4waBqOA.    code: oipw
 
 ## Acknowledge
 Thanks to pioneering helpful works:
