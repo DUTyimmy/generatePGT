@@ -60,7 +60,7 @@ def _work(process_id, model, dataset, args):
     # ------------- CRF ------------- #
     print('\nCRFing .....   \n  ', end='')
 
-    crf(input_path=args.sal_dataset_dir, sal_path='result/cam', output_path='result/cam_pamr', binary=0.4)
+    crf(input_path=args.sal_dataset_dir, sal_path=args.cam_pamr_out_dir, output_path=args.cam_pamr_out_dir, binary=0.4)
 
 
 def run(args):
